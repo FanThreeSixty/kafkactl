@@ -1,0 +1,11 @@
+default:
+  version: V0_10_2_0
+  brokers:
+    - kafka:39092
+  monitor:
+    groups:
+      kafkactl:
+        - KAFKA_LOADTESTING
+    topics:
+      - KAFKA_LOADTESTING
+      - KAFKA_HEARTBEAT

@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  zookeeper:
+    image: zookeeper
+    ports:
+      - 2181
+  kafka:
+    hostname: kafka
+    depends_on:
+      - zookeeper
+    image: confluentinc/cp-kafka:3.3.0-1
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+    ports:
+      - "39092:9092"
