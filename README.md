@@ -24,27 +24,6 @@ Flags:
   -h, --help                  help for kafkactl
   -v, --verbose               Enable verbose debugging of script.
 
-Use "kafkactl [command] --help" for more information about a command.kafkactl is a command line script to interact with (a) Kafka client(s)/cluster(s)
-
-Usage:
-  kafkactl [command]
-
-Available Commands:
-  consume     consume commands for Kafka
-  describe    command for describing resources in Kafka.
-  get         command for getting resources in Kafka.
-  health      Check health of configured Kafka Cluster
-  help        Help about any command
-  manage      command for managing resources in Kafka.
-  produce     producer commands for Kafka
-  version     Display version information for Kafkactl
-
-Flags:
-  -b, --brokers stringSlice   Space delimited list of Kafka Brokers to connect to. (default [127.0.0.1:9092])
-  -e, --environment string    Change configuration based on Environment.
-  -h, --help                  help for kafkactl
-  -v, --verbose               Enable verbose debugging of script.
-
 Use "kafkactl [command] --help" for more information about a command.
 ```
 
@@ -87,20 +66,20 @@ $ kafkactl -e local health
 
 ```sh
 cd $GOPATH
-go get github.com/sporting-innovations/kafkactl
-go install github.com/sporting-innovations/kafkactl
+go get github.com/FanThreeSixty/kafkactl
+go install github.com/FanThreeSixty/kafkactl
 ```
 or
 
 ```sh
-git clone github.com/sporting-innovations/kafkactl
+git clone github.com/FanThreeSixty/kafkactl
 go build -o kafkactl .
 ```
 
 **Building for Linux:**
 
 ```sh
-git clone github.com/sporting-innovations/kafkactl
+git clone github.com/FanThreeSixty/kafkactl
 GOOS=linux go build -o kafkactl .
 ```
 
