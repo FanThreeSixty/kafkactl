@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/sporting-innovations/kafkactl/commands"
+	"github.com/FanThreeSixty/kafkactl/commands"
 )
 
 func main() {
